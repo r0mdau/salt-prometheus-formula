@@ -12,6 +12,6 @@ prometheus_conf:
   file.managed:
     - name: /etc/prometheus/prometheus.yml
     - template: jinja
-    - source: salt://monitor/templates/prometheus.j2
+    - source: salt://prometheus/templates/prometheus.j2
     - watch_in:
       - service: prometheus
