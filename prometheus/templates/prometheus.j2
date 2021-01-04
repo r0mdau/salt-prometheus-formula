@@ -15,5 +15,5 @@ scrape_configs:
       - targets:
         - 'localhost:9100'
 {%- for target in pillar['targets'] %}
-        - '{{ target }}:9100'
+        - '{{ target.host }}:{{ target.port }}'
 {%- endfor %}
